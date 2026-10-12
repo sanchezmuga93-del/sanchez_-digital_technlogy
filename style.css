@@ -317,4 +317,56 @@ footer {
         font-size: 19px;
         text-align: center;
     }
+    ```css
+/* Request a Website Contact Section */
+.contact-cta {
+    background: #123c69;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin: 30px auto;
+    border-radius: 12px;
+    max-width: 850px;
+}
+
+.contact-cta h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.contact-cta p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.contact-cta .project-link {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-cta .project-link:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .contact-cta {
+        margin: 20px 10px;
+        padding: 25px 15px;
+    }
+
+    .contact-cta h3 {
+        font-size: 22px;
+    }
+}
+```
+
 }
