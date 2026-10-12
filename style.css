@@ -370,3 +370,29 @@ footer {
 ```
 
 }
+```css
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    z-index: 1000;
+    background: #123c69;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+    background: #25D366;
+    transform: translateY(-3px);
+}
+```
+
