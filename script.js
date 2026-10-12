@@ -25,5 +25,26 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     });
 });
 
+
 // 3. Display a message in the browser console
-console.log("Digital Vision Technologies website is running successfully!");
+console.log("Digital Vision Technologies website is running successfully!");```javascript
+// Back to Top Button
+const backToTopButton = document.getElementById("backToTop");
+
+// Show the button when the visitor scrolls down
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+});
+
+// Return to the top when clicked
+backToTopButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+```
