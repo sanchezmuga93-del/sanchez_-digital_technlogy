@@ -47,4 +47,39 @@ backToTopButton.addEventListener("click", function () {
         behavior: "smooth"
     });
 });
+
+
+
+```javascript
+// Mobile Navigation Menu
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+    // Open and close the menu
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+
+        const isOpen = navLinks.classList.contains("show");
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+
+    // Close the menu after a link is selected
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("show");
+            menuToggle.textContent = "☰";
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        });
+    });
+}
+```
+
 ```
