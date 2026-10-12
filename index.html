@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,84 +7,439 @@
 
     <title>Digital Vision Technologies | Web & IT Services</title>
 
-    <meta name="description" content="Digital Vision Technologies offers website development, Microsoft Word and Excel services, and data entry.">
+    <meta name="description"
+          content="Digital Vision Technologies offers website development, computer services, Microsoft Word, Excel, data entry, and beginner coding lessons in Kenya.">
+
+    <meta name="theme-color" content="#071a33">
 
     <link rel="stylesheet" href="style.css">
-</head>
- <body>
-    <h1>Welcome to Sanchez Glein Digital Services</h1>
-    
-<!-- Digital Vision Technologies Logo -->
-<div class="brand-logo">
-    <div class="logo-icon">DV</div>
 
-    <div class="logo-text">
-        <h2>Digital Vision</h2>
-        <p>TECHNOLOGIES</p>
-    </div>
-</div>
-    <button id="welcomeButton">🔊 Click to Listen</button>
+    <style>
+        /* ===== PROFESSIONAL BRAND HEADER ===== */
 
-    <script>
-        const welcomeButton = document.getElementById("welcomeButton");
+        .brand-header {
+            background: #071a33;
+            color: white;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-        welcomeButton.addEventListener("click", function () {
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
 
-            const message = new SpeechSynthesisUtterance(
-                "Welcome to sanchez muga glein digital-vision technology solution to all ict services."
+        .logo-icon {
+            width: 58px;
+            height: 58px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #00d4ff, #1769ff);
+            color: white;
+            font-size: 23px;
+            font-weight: 900;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-text h2 {
+            margin: 0;
+            color: white;
+            font-size: 23px;
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            margin: 5px 0 0;
+            color: #00d4ff;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        /* ===== WELCOME AUDIO BUTTON ===== */
+
+        .listen-area {
+            padding: 25px 15px;
+            text-align: center;
+            background: #eef8ff;
+        }
+
+        #welcomeButton {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 28px;
+            border: 0;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #087cff, #00bcd4);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 7px 20px rgba(0, 115, 230, 0.3);
+            transition: transform 0.25s, box-shadow 0.25s;
+            animation: listenPulse 2s infinite;
+        }
+
+        #welcomeButton:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 115, 230, 0.4);
+        }
+
+        #welcomeButton:focus-visible {
+            outline: 3px solid #071a33;
+            outline-offset: 4px;
+        }
+
+        #listenIcon {
+            font-size: 24px;
+        }
+
+        #welcomeStatus {
+            margin: 12px 0 0;
+            color: #123c69;
+            font-size: 14px;
+        }
+
+        @keyframes listenPulse {
+            0%, 100% {
+                box-shadow: 0 7px 20px rgba(0, 115, 230, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 7px 28px rgba(0, 188, 212, 0.65);
+            }
+        }
+
+        /* ===== NAVIGATION ===== */
+
+        .navbar {
+            background: #102d50;
+            padding: 12px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 12px 17px;
+            border-radius: 6px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .nav-links a:hover {
+            background: #087cff;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: #087cff;
+            color: white;
+            border: 0;
+            padding: 8px 13px;
+            font-size: 27px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+
+        .hero {
+            scroll-margin-top: 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero-content h1 span {
+            color: #00c9ff;
+        }
+
+        /* ===== SECTION SPACING ===== */
+
+        .section,
+        .hero {
+            scroll-margin-top: 20px;
+        }
+
+        .service-container,
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(230px, 1fr)
             );
+            gap: 22px;
+            margin-top: 30px;
+        }
 
-            message.lang = "en-KE";
-            message.rate = 0.9;
-            message.pitch = 1;
+        .service-card,
+        .project-card {
+            height: 100%;
+        }
 
-            speechSynthesis.cancel();
-            speechSynthesis.speak(message);
-        });
-    </script>
+        .project-card {
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #087cff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-card h3 {
+            color: #123c69;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: auto;
+            padding: 11px 18px;
+            background: #123c69;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            background: #087cff;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 8px 12px;
+            background: #fff0c2;
+            color: #775600;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+
+        .contact-cta {
+            max-width: 850px;
+            margin: 35px auto 0;
+            padding: 35px 20px;
+            border-radius: 14px;
+            text-align: center;
+            background: linear-gradient(135deg, #123c69, #087cff);
+            color: white;
+        }
+
+        .contact-cta h3 {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .contact-cta p {
+            color: white;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .contact-cta .project-link {
+            background: #25d366;
+            color: white;
+        }
+
+        .contact-cta .project-link:hover {
+            background: #169b48;
+        }
+
+        /* ===== BACK TO TOP ===== */
+
+        #backToTop {
+            display: none;
+            position: fixed;
+            right: 20px;
+            bottom: 25px;
+            z-index: 1000;
+            padding: 13px 18px;
+            border: none;
+            border-radius: 30px;
+            background: #087cff;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        #backToTop:hover {
+            background: #123c69;
+        }
+
+        /* ===== MOBILE RESPONSIVENESS ===== */
+
+        @media (max-width: 768px) {
+            .brand-header {
+                justify-content: center;
+            }
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .menu-toggle {
+                display: block;
+                align-self: flex-end;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                gap: 3px;
+                padding-top: 10px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li,
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            #welcomeButton {
+                max-width: 100%;
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+
+            .logo-text h2 {
+                font-size: 20px;
+            }
+
+            .logo-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .contact-cta {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #welcomeButton {
+                animation: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
 <body>
 
-    <!-- Navigation -->
-    <header>
-        ```html
-<div class="brand-logo">
-    <div class="logo-icon">DV</div>
+    <!-- BRAND HEADER AND LOGO -->
+    <header class="brand-header" id="top">
 
-    <div class="logo-text">
-        <h2>Digital Vision</h2>
-        <p>TECHNOLOGIES</p>
-    </div>
-</div>
-```
+        <a href="#home" class="brand-logo" aria-label="Digital Vision Technologies Home">
+            <div class="logo-icon">DV</div>
 
-        <nav class="navbar">
-            <a href="#home" class="logo">Digital Vision <span>Technologies</span></a>
+            <div class="logo-text">
+                <h2>Digital Vision</h2>
+                <p>TECHNOLOGIES</p>
+            </div>
+        </a>
 
-            <ul class="nav-links">
-              ```html
-<nav class="navbar">
-    <button class="menu-toggle" id="menuToggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false">
-        ☰
-    </button>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- WELCOME VOICE BUTTON -->
+    <div class="listen-area">
+
+        <button type="button" id="welcomeButton">
+            <span id="listenIcon" aria-hidden="true">🔊</span>
+            <span id="listenText">Click to Listen to Our Welcome</span>
+        </button>
+
+        <p id="welcomeStatus" aria-live="polite">
+            Tap the button to hear a welcome message from Digital Vision Technologies.
+        </p>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" aria-label="Main navigation">
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HOME SECTION -->
     <section id="home" class="hero">
+
         <div class="hero-content">
-            <p class="welcome">WELCOME TO GLEIN SANCHEZ DIGITAL VISION TECHNOLOGIES</p>
+
+            <p class="welcome">
+                WELCOME TO GLEIN SANCHEZ DIGITAL VISION TECHNOLOGIES
+            </p>
 
             <h1>We Build Your <span>Digital Future</span></h1>
 
@@ -94,12 +449,16 @@
             </p>
 
             <a href="#services" class="btn">Explore Our Services</a>
+
             <a href="#contact" class="btn btn-outline">Contact Us</a>
+
         </div>
+
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section">
+
         <h2>About Us</h2>
 
         <p class="section-intro">
@@ -113,11 +472,14 @@
             mobile-friendly websites while offering computer services
             such as document formatting, spreadsheet preparation, and data entry.
         </p>
+
     </section>
 
-    <!-- Services Section -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="section services-section">
+
         <h2>Our Services</h2>
+
         <p class="section-intro">
             Practical digital solutions to help you grow.
         </p>
@@ -127,49 +489,82 @@
             <div class="service-card">
                 <div class="service-icon">🏫</div>
                 <h3>School Websites</h3>
-                <p>School information, announcements, photo galleries, and contact pages.</p>
+                <p>
+                    School information, announcements, photo galleries,
+                    and contact pages.
+                </p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">🏢</div>
                 <h3>Business Websites</h3>
-                <p>Showcase your business, products, services, and contact information.</p>
+                <p>
+                    Showcase your business, products, services,
+                    and contact information.
+                </p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">⛪</div>
                 <h3>Church & Community Websites</h3>
-                <p>Share events, projects, announcements, and community activities.</p>
+                <p>
+                    Share events, projects, announcements,
+                    and community activities.
+                </p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">👨‍💻</div>
                 <h3>Personal Websites</h3>
-                <p>Professional portfolios and personal websites to showcase your work.</p>
+                <p>
+                    Professional portfolios and personal websites
+                    to showcase your work.
+                </p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">📄</div>
                 <h3>Microsoft Word</h3>
-                <p>Document typing, formatting, reports, letters, and CV preparation.</p>
+                <p>
+                    Document typing, formatting, reports, letters,
+                    and CV preparation.
+                </p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">📊</div>
                 <h3>Microsoft Excel & Data Entry</h3>
-                <p>Spreadsheet organization, data entry, and basic data management.</p>
-
+                <p>
+                    Spreadsheet organization, data entry,
+                    and basic data management.
+                </p>
             </div>
-             <div class="service-card">
-                <div class="service-icon">📊</div>
-                <h3>All online classes for computer packeges and bigginer in coding</h3>
-                <p>htm,css,javascript,phython,supabase,github skills. And even online application services</p>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Computer Packages & Coding Lessons</h3>
+                <p>
+                    Beginner lessons in HTML, CSS, JavaScript, Python,
+                    Supabase, GitHub, and other digital skills.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Online Application Assistance</h3>
+                <p>
+                    Assistance with online applications and
+                    completing digital forms.
+                </p>
+            </div>
 
         </div>
+
     </section>
 
-    <!-- Projects Section -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
+
         <h2>Our Projects</h2>
 
         <p class="section-intro">
@@ -180,126 +575,220 @@
 
             <div class="project-card">
                 <h3>Western Legend Youth Group</h3>
+
                 <p>
                     A community website showcasing the group's information,
                     activities, and future projects.
                 </p>
-                <a href="https://western-legends-youth-group.netlify.app/"
-                   target="_blank" rel="noopener noreferrer" class="project-link">
+
+                <a
+                    href="https://western-legends-youth-group.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link">
                     View Website →
                 </a>
             </div>
 
             <div class="project-card">
                 <h3>School Modern Library System</h3>
+
                 <p>
                     A library management project in development, designed
                     to support book borrowing and library resources.
                 </p>
+
                 <span class="project-status">In Development</span>
             </div>
 
+            <div class="project-card">
+                <h3>School Website Demo</h3>
+
+                <p>
+                    A sample website for schools to display school
+                    information, announcements, and contacts.
+                </p>
+
+                <a href="school-demo.html" class="project-link">
+                    View Demo →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Business Website Demo</h3>
+
+                <p>
+                    A sample business website showcasing products,
+                    services, and customer contact information.
+                </p>
+
+                <a href="bussines-demo.html" class="project-link">
+                    View Demo →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Church Website Demo</h3>
+
+                <p>
+                    A sample church website showcasing church information,
+                    ministries, events, and contact details.
+                </p>
+
+                <a href="church-demo.html" class="project-link">
+                    View Demo →
+                </a>
+            </div>
+
         </div>
-        
-          
-<div class="project-card">
-    <h3>School Website Demo</h3>
-    <p>
-        A sample website for schools to display
-        school information, announcements, and contacts.
-    </p>
-    <a href="school-demo.html" class="project-link">
-        View Demo →
-    </a>
-</div>
-        
-<div class="project-card">
-    <h3>Business Website Demo</h3>
-    <p>
-        A sample business website showcasing products,
-        services, and customer contact information.
-    </p>
-    <a href="business-demo.html" class="project-link">
-        View Demo →
-    </a>
-</div>
-        ```html
-<div class="project-card">
-    <h3>Church Website Demo</h3>
-
-    <p>
-        A sample church website showcasing church
-        information, ministries, events, and contact details.
-    </p>
-
-    <a href="church-demo.html" class="project-link">
-        View Demo →
-    </a>
-</div>
-```
 
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section contact-section">
+
         <h2>Contact Us</h2>
 
         <p class="section-intro">
-            Do you need a website or computer services? Let's discuss your project.
+            Do you need a website or computer services?
+            Let's discuss your project.
         </p>
 
         <div class="contact-details">
+
             <p><strong>Business:</strong> Digital Vision Technologies</p>
+
             <p><strong>Location:</strong> Kenya</p>
-            <p><strong>Services:</strong> Website Development & Computer Services</p>
 
-        
-<a
-    href="https://wa.me/254707615977?text=Hello%20Digital%20Vision%20Technologies%2C%20I%20need%20a%20website%20for%20my%20business.%20Please%20share%20your%20services%20and%20prices."
-    class="btn"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    Chat With Us on WhatsApp
-</a>
+            <p>
+                <strong>Services:</strong>
+                Website Development & Computer Services
+            </p>
+
+            <a
+                href="https://wa.me/254707615977?text=Hello%20Digital%20Vision%20Technologies%2C%20I%20need%20a%20website%20for%20my%20business.%20Please%20share%20your%20services%20and%20prices."
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer">
+                Chat With Us on WhatsApp
+            </a>
+
         </div>
-        ```html
-<div class="contact-cta">
-    <h3>Need a Website for Your Organization?</h3>
 
-    <p>
-        Digital Vision Technologies can help you create
-        a professional website for your school, business,
-        church, or community group.
-    </p>
+        <div class="contact-cta">
 
-    <a
-        href="https://wa.me/254707615977?text=Hello%20Digital%20Vision%20Technologies%2C%20I%20need%20a%20website."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="project-link">
-        Request a Website on WhatsApp
-    </a>
-</div>
-```
+            <h3>Need a Website for Your Organization?</h3>
+
+            <p>
+                Digital Vision Technologies can help you create
+                a professional website for your school, business,
+                church, or community group.
+            </p>
+
+            <a
+                href="https://wa.me/254707615977?text=Hello%20Digital%20Vision%20Technologies%2C%20I%20need%20a%20website."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link">
+                Request a Website on WhatsApp
+            </a>
+
+        </div>
 
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
+
         <p>
-            &copy; <span id="year"></span> Digital Vision Technologies.
-            All rights reserved.
+            &copy; <span id="year"></span>
+            Digital Vision Technologies. All rights reserved.
         </p>
+
     </footer>
 
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" type="button" title="Back to Top">
+        ↑ Back to Top
+    </button>
+
+    <!-- PAGE JAVASCRIPT -->
     <script src="script.js"></script>
-    ```html
-<!-- Back to Top Button -->
-<button id="backToTop" title="Back to Top">
-    ↑ Back to Top
-</button>
-```
+
+    <script>
+        // Welcome voice button
+        (function () {
+            const welcomeButton = document.getElementById("welcomeButton");
+            const listenIcon = document.getElementById("listenIcon");
+            const listenText = document.getElementById("listenText");
+            const welcomeStatus = document.getElementById("welcomeStatus");
+
+            if (!welcomeButton) return;
+
+            let isSpeaking = false;
+
+            welcomeButton.addEventListener("click", function () {
+                if (!("speechSynthesis" in window)) {
+                    welcomeStatus.textContent =
+                        "Sorry, speech is not supported by this browser.";
+                    return;
+                }
+
+                if (isSpeaking) {
+                    window.speechSynthesis.cancel();
+                    isSpeaking = false;
+                    listenIcon.textContent = "🔊";
+                    listenText.textContent = "Click to Listen to Our Welcome";
+                    welcomeStatus.textContent = "Welcome message stopped.";
+                    return;
+                }
+
+                const message = new SpeechSynthesisUtterance(
+                    "Welcome to Digital Vision Technologies. " +
+                    "Your trusted partner for website development, " +
+                    "computer services, and digital skills in Kenya. " +
+                    "We build your digital future. Explore our services " +
+                    "and contact us today. Thank you for visiting."
+                );
+
+                message.lang = "en-KE";
+                message.rate = 0.9;
+                message.pitch = 1.05;
+                message.volume = 1;
+
+                message.onstart = function () {
+                    isSpeaking = true;
+                    listenIcon.textContent = "🔈";
+                    listenText.textContent = "Stop Welcome Message";
+                    welcomeStatus.textContent = "Playing your welcome message...";
+                };
+
+                message.onend = function () {
+                    isSpeaking = false;
+                    listenIcon.textContent = "🔊";
+                    listenText.textContent = "Listen Again";
+                    welcomeStatus.textContent =
+                        "Thank you for listening to Digital Vision Technologies.";
+                };
+
+                message.onerror = function () {
+                    isSpeaking = false;
+                    listenIcon.textContent = "🔊";
+                    listenText.textContent = "Try Listening Again";
+                    welcomeStatus.textContent =
+                        "Speech could not play. Please check your browser sound settings.";
+                };
+
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(message);
+            });
+        })();
+
+        // Update copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
 
 </body>
 </html>
+```
