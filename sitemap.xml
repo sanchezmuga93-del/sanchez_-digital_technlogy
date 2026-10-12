@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sanchez--digital-technlogy.sanchezmuga93.workers.dev/</loc>
-  </url>
+
+    <url>
+        <loc>https://sanchez--digital-technlogy.sanchezmuga93.workers.dev/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://sanchez--digital-technlogy.sanchezmuga93.workers.dev/school-demo.html</loc>
+    </url>
+
+    <url>
+        <loc>https://sanchez--digital-technlogy.sanchezmuga93.workers.dev/bussines-demo.html</loc>
+    </url>
+
+    <url>
+        <loc>https://sanchez--digital-technlogy.sanchezmuga93.workers.dev/church-demo.html</loc>
+    </url>
+
 </urlset>
