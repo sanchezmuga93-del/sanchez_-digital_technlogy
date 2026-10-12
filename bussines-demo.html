@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glein Business Centre | Business Demo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #263238;
+        }
+
+        header {
+            background: #12372a;
+            color: white;
+            padding: 18px 7%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: #f4c95d;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #12372a, #298568);
+            color: white;
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #f4c95d;
+            color: #12372a;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 55px 7%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #12372a;
+            margin-bottom: 15px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .card {
+            background: #f1f7f3;
+            padding: 28px 20px;
+            border-radius: 10px;
+            border: 1px solid #dce9df;
+        }
+
+        .card .icon {
+            font-size: 38px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .about {
+            background: #f7f9f7;
+        }
+
+        .contact {
+            background: #eaf4ee;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        footer {
+            background: #12372a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>Glein Business Centre</h2>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>Welcome to Glein Business Centre</h1>
+            <p>
+                Quality services, reliable support, and a better
+                experience for every customer.
+            </p>
+            <a href="#services" class="button">Explore Our Services</a>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Our Business</h2>
+            <p>
+                Glein Business Centre is a sample business created by
+                Digital Vision Technologies to demonstrate how a business
+                can present its services online.
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Discover what our sample business offers.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">🛍️</div>
+                    <h3>Products</h3>
+                    <p>Showcase products and help customers learn about them.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🤝</div>
+                    <h3>Customer Support</h3>
+                    <p>Help customers ask questions about products and services.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🚚</div>
+                    <h3>Delivery Services</h3>
+                    <p>Share delivery options and important business information.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Our Business</h2>
+            <p>This is a demonstration website.</p>
+            <p>Replace the sample details with your client's real information.</p>
+            <p>Website design by Digital Vision Technologies.</p>
+            <a class="button" href="https://wa.me/254707615977"
+               target="_blank" rel="noopener noreferrer">
+                Contact Us on WhatsApp
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Glein Business Centre | Business Website Demo</p>
+        <p>Designed by Digital Vision Technologies</p>
+    </footer>
+
+</body>
+</html>
