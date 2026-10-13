@@ -747,5 +747,111 @@ nav a:focus-visible {
         padding: 9px 10px;
     }
 }
+```css
+/* ===== DIGITAL VISION TECHNOLOGIES NAVIGATION ===== */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 11px 17px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background-color: #65e4ff;
+    color: #07152e;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* HAMBURGER MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+    background: #65e4ff;
+    color: #07152e;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: #ffffff;
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 13px 16px;
+        text-align: center;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+        background: #65e4ff;
+        color: #07152e;
+        transform: none;
+    }
+}
+
+/* SMOOTH SECTION NAVIGATION */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+```
+
 ```
 
