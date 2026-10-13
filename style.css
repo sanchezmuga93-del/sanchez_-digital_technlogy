@@ -1,4 +1,4 @@
-```css
+
 /* =========================================
    DIGITAL VISION TECHNOLOGIES
    COMPLETE RESPONSIVE WEBSITE STYLESHEET
@@ -768,4 +768,67 @@ footer p {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* MOBILE PHONE NAVIGATION */
+
+.menu-toggle {
+display: none;
+cursor: pointer;
+font-size: 28px;
+background: transparent;
+border: none;
+color: white;
+padding: 8px 12px;
+z-index: 1001;
+}
+
+@media screen and (max-width: 768px) {
+.navbar {
+position: relative;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+flex-wrap: wrap;
+}
+
+```
+.menu-toggle {
+    display: block;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    background: #111827;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-links li {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 14px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background: #374151;
+}
+```
+
+}
+
 ```
