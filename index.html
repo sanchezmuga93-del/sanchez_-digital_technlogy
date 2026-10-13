@@ -814,7 +814,81 @@
         </a>
 
     </div>
+    
 </section>
+    
+<!-- CONTACT SECTION -->
+<section id="contact" style="padding: 40px 18px; background: #eef4ff; text-align: center;">
+  <h2>Contact Digital Vision Technologies</h2>
+  <p>Need a website or computer services? Send us a message.</p>
+
+  <form id="contactForm" style="max-width: 500px; margin: auto; text-align: left;">
+    <label for="customerName">Your Name</label>
+    <input id="customerName" type="text" placeholder="Enter your name" required
+      style="display:block; box-sizing:border-box; width:100%; padding:12px; margin:8px 0 16px;">
+
+    <label for="customerEmail">Your Email</label>
+    <input id="customerEmail" type="email" placeholder="Enter your email" required
+      style="display:block; box-sizing:border-box; width:100%; padding:12px; margin:8px 0 16px;">
+
+    <label for="customerMessage">Your Message</label>
+    <textarea id="customerMessage" rows="5" placeholder="How can we help you?" required
+      style="display:block; box-sizing:border-box; width:100%; padding:12px; margin:8px 0 16px;"></textarea>
+
+    <button type="button" id="emailButton"
+      style="width:100%; padding:14px; margin-bottom:10px; background:#1877F2; color:white; border:0; border-radius:6px; font-weight:bold;">
+      Send by Email
+    </button>
+
+    <button type="button" id="whatsappButton"
+      style="width:100%; padding:14px; background:#25D366; color:white; border:0; border-radius:6px; font-weight:bold;">
+      Send by WhatsApp
+    </button>
+  </form>
+
+  <p style="margin-top:20px;">
+    Email: <a href="mailto:Sanchezmuga93@gmail.com">Sanchezmuga93@gmail.com</a>
+  </p>
+</section>
+
+<script>
+(function () {
+  const form = document.getElementById("contactForm");
+
+  document.getElementById("emailButton").addEventListener("click", function () {
+    if (!form.reportValidity()) return;
+
+    const name = document.getElementById("customerName").value.trim();
+    const email = document.getElementById("customerEmail").value.trim();
+    const message = document.getElementById("customerMessage").value.trim();
+
+    const subject = encodeURIComponent("Website enquiry from " + name);
+    const body = encodeURIComponent(
+      "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message
+    );
+
+    window.location.href =
+      "mailto:Sanchezmuga93@gmail.com?subject=" + subject + "&body=" + body;
+  });
+
+  document.getElementById("whatsappButton").addEventListener("click", function () {
+    if (!form.reportValidity()) return;
+
+    const name = document.getElementById("customerName").value.trim();
+    const email = document.getElementById("customerEmail").value.trim();
+    const message = document.getElementById("customerMessage").value.trim();
+
+    const text = encodeURIComponent(
+      "Hello Digital Vision Technologies!\n\n" +
+      "Name: " + name + "\nEmail: " + email +
+      "\n\nMessage:\n" + message
+    );
+
+    window.open("https://wa.me/254707615977?text=" + text, "_blank");
+  });
+})();
+</script>
+<!-- END CONTACT SECTION -->
 <!-- END SOCIAL MEDIA LINKS -->
 </body>
 </html>
