@@ -703,4 +703,49 @@ footer p {
         transition-duration: 0.01ms !important;
     }
 }
+```css
+/* MODERN NAVIGATION MENU */
+nav {
+    background: #07152e;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 7px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: #65e4ff;
+    color: #07152e;
+    outline: none;
+}
+
+/* MOBILE-FRIENDLY NAVIGATION */
+@media (max-width: 600px) {
+    nav {
+        padding: 12px 8px;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 9px 10px;
+    }
+}
 ```
+
