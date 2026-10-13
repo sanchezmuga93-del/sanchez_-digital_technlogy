@@ -5,154 +5,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sanchez Glein Digital Vision Technologies | Kenya</title>
+    <title>Sanchez Glein | Digital Vision Technologies</title>
 
-    <meta name="description" content="Digital Vision Technologies in Kenya offers professional website development, school and business websites, computer services, Microsoft Word and Excel support, data entry, and beginner coding lessons.">
+    <meta name="description" content="Digital Vision Technologies offers professional website development, computer services, digital skills training and affordable website packages in Kenya.">
 
-    <meta name="theme-color" content="#071a33">
-
-    <meta name="author" content="Sanchez Glein">
-
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#101a35">
 
     <style>
-        /* BRAND HEADER */
-        .brand-header {
-            background: #071a33;
-            color: white;
-            padding: 18px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+        /* =========================
+           GENERAL WEBSITE STYLES
+        ========================= */
 
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 58px;
-            height: 58px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #00d4ff, #1769ff);
-            color: white;
-            font-size: 23px;
-            font-weight: 900;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .logo-text h2 {
+        * {
+            box-sizing: border-box;
             margin: 0;
-            color: white;
-            font-size: 23px;
+            padding: 0;
         }
 
-        .logo-text p {
-            margin: 5px 0 0;
-            color: #00d4ff;
-            font-size: 11px;
-            font-weight: bold;
-            letter-spacing: 4px;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
         }
 
-        /* WELCOME VOICE */
-        .listen-area {
-            padding: 22px 15px;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #263247;
+            background: #f5f7fb;
+            overflow-wrap: anywhere;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        input[type="submit"] {
+            cursor: pointer;
+        }
+
+        section {
+            padding: 65px 20px;
+            scroll-margin-top: 75px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .section-title {
             text-align: center;
-            background: #eef8ff;
+            font-size: clamp(27px, 4vw, 38px);
+            line-height: 1.25;
+            color: #101a35;
+            margin-bottom: 15px;
         }
 
-        #welcomeButton {
+        .section-intro {
+            max-width: 750px;
+            margin: 0 auto 35px;
+            text-align: center;
+            color: #647084;
+        }
+
+        .button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 15px 25px;
+            min-height: 46px;
+            padding: 12px 20px;
             border: none;
-            border-radius: 50px;
-            background: linear-gradient(135deg, #087cff, #00bcd4);
+            border-radius: 7px;
+            background: #087fdb;
             color: white;
-            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
             font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 5px 18px rgba(0, 115, 230, 0.25);
+            transition: background 0.2s;
         }
 
-        #welcomeButton:focus-visible {
-            outline: 3px solid #071a33;
-            outline-offset: 4px;
+        .button:hover {
+            background: #075fa5;
         }
 
-        #welcomeStatus {
-            margin-top: 12px;
-            color: #123c69;
-            font-size: 14px;
+        .button-green {
+            background: #128c45;
         }
 
-        /* NAVIGATION */
-        .navbar {
-            position: relative;
+        .button-green:hover {
+            background: #0b6d35;
+        }
+
+        .button-dark {
+            background: #101a35;
+        }
+
+        .button-dark:hover {
+            background: #25385e;
+        }
+
+        /* =========================
+           HEADER AND NAVIGATION
+        ========================= */
+
+        .site-header {
+            position: sticky;
+            top: 0;
             z-index: 1000;
-            background: #102d50;
-            padding: 12px 5%;
+            background: #101a35;
+            color: white;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
+            gap: 15px;
             flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            line-height: 1.3;
+        }
+
+        .brand-main {
+            font-size: 22px;
+            font-weight: 800;
+            color: white;
+        }
+
+        .brand-sub {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #70c4ff;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            min-width: 46px;
+            min-height: 44px;
+            padding: 5px 12px;
+            border: 1px solid #60708f;
+            border-radius: 6px;
+            background: transparent;
+            color: white;
+            font-size: 25px;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
+            gap: 4px;
             list-style: none;
-            padding: 0;
-            margin: 0;
         }
 
         .nav-links a {
             display: block;
-            padding: 12px 17px;
-            border-radius: 6px;
+            padding: 10px 9px;
+            border-radius: 5px;
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
+            font-size: 14px;
         }
 
-        .nav-links a:hover,
-        .nav-links a:focus-visible {
-            background: #087cff;
+        .nav-links a:hover {
+            background: #25385e;
         }
 
-        .menu-toggle {
-            display: none;
-            background: #087cff;
-            color: white;
-            border: none;
-            padding: 8px 13px;
-            font-size: 27px;
-            border-radius: 7px;
-            cursor: pointer;
-        }
+        /* =========================
+           WELCOME SECTION
+        ========================= */
 
-        /* WELCOME HERO */
-        .welcome-sanchez {
-            background: linear-gradient(135deg, #07152e, #0759b8, #07152e);
-            color: white;
+        .welcome {
+            min-height: 490px;
+            display: flex;
+            align-items: center;
             text-align: center;
-            padding: 70px 20px;
+            color: white;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(0, 152, 255, 0.32),
+                    transparent 40%
+                ),
+                linear-gradient(135deg, #101a35, #163c70);
         }
 
         .welcome-content {
@@ -161,302 +218,348 @@
         }
 
         .welcome-label {
-            color: #65e4ff;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 5px;
-        }
-
-        .welcome-sanchez h1 {
-            font-size: clamp(34px, 7vw, 60px);
-            margin: 15px 0;
-            font-weight: 900;
-        }
-
-        .welcome-sanchez h2 {
-            font-size: clamp(21px, 4vw, 32px);
-            color: #65e4ff;
-            margin: 10px 0 20px;
-        }
-
-        .welcome-message {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .welcome-description {
-            max-width: 680px;
-            margin: 20px auto 30px;
-            line-height: 1.8;
-            color: #e3edff;
-        }
-
-        .welcome-button {
             display: inline-block;
-            background: #65e4ff;
-            color: #07152e;
-            text-decoration: none;
-            padding: 14px 20px;
-            margin: 7px;
-            border-radius: 8px;
+            margin-bottom: 15px;
+            color: #83d0ff;
             font-weight: bold;
-            transition: 0.2s;
+            letter-spacing: 3px;
         }
 
-        .welcome-button:hover {
-            background: white;
-            transform: translateY(-2px);
-        }
-
-        .whatsapp-welcome {
-            background: #25d366;
-            color: white;
-        }
-
-        /* GENERAL SECTIONS */
-        .section,
-        .welcome-sanchez {
-            scroll-margin-top: 20px;
-        }
-
-        .section-intro {
-            max-width: 750px;
-            margin: 0 auto 25px;
-            line-height: 1.8;
-            text-align: center;
-        }
-
-        /* SERVICES AND PROJECTS */
-        .service-container,
-        .project-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 22px;
-            margin-top: 30px;
-        }
-
-        .service-card,
-        .project-card {
-            box-sizing: border-box;
-            height: 100%;
-            min-width: 0;
-        }
-
-        .project-card {
-            padding: 25px;
-            border-radius: 12px;
-            background: white;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid #087cff;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .project-card h3 {
-            color: #123c69;
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            line-height: 1.7;
-            margin-bottom: 18px;
-        }
-
-        .project-link {
-            display: inline-block;
-            margin-top: auto;
-            padding: 11px 18px;
-            background: #123c69;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .project-link:hover {
-            background: #087cff;
-        }
-
-        .project-status {
-            display: inline-block;
-            padding: 8px 12px;
-            background: #fff0c2;
-            color: #775600;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        /* PRICING */
-        .pricing-section {
-            padding: 50px 18px;
-            background: #f4f7fb;
-            text-align: center;
-        }
-
-        .pricing-section h2 {
-            font-size: 30px;
-            color: #12315b;
+        .welcome h1 {
+            font-size: clamp(34px, 7vw, 66px);
+            line-height: 1.15;
             margin-bottom: 10px;
         }
 
-        .pricing-intro {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            line-height: 1.8;
+        .welcome h2 {
+            font-size: clamp(22px, 4vw, 35px);
+            color: #80d0ff;
+            margin-bottom: 15px;
         }
 
-        .pricing-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 22px;
-            max-width: 1200px;
-            margin: auto;
+        .welcome h3 {
+            font-size: clamp(18px, 3vw, 25px);
+            margin-bottom: 15px;
         }
 
-        .pricing-card {
+        .welcome p {
+            max-width: 760px;
+            margin: 0 auto 22px;
+            color: #e0e9f8;
+        }
+
+        .welcome-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .welcome .button-dark {
             background: white;
-            border-radius: 14px;
+            color: #101a35;
+        }
+
+        .listen-button {
+            display: inline-block;
+            margin: 0 0 20px;
+            padding: 10px 15px;
+            border: 1px solid #8dcfff;
+            border-radius: 7px;
+            color: white;
+            background: transparent;
+        }
+
+        .listen-button:hover {
+            background: #25385e;
+        }
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
             padding: 25px;
-            box-sizing: border-box;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            background: white;
+            border: 1px solid #e1e7f0;
+        }
+
+        .about-content p + p {
+            margin-top: 15px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 24px;
+            border: 1px solid #e1e7f0;
+            border-radius: 12px;
+            background: white;
+        }
+
+        .service-icon {
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 8px;
+            color: #101a35;
+        }
+
+        .service-card p {
+            color: #647084;
+        }
+
+        /* =========================
+           PRICING
+        ========================= */
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .price-card {
             display: flex;
             flex-direction: column;
+            padding: 25px;
+            border: 1px solid #dce4ef;
+            border-radius: 12px;
+            background: white;
         }
 
-        .pricing-card.featured {
-            border: 2px solid #1877f2;
-        }
-
-        .pricing-card h3 {
-            color: #12315b;
+        .price-card h3 {
+            color: #101a35;
+            font-size: 22px;
         }
 
         .price {
-            font-size: 27px;
-            font-weight: bold;
-            color: #1877f2;
+            margin: 12px 0;
+            color: #087fdb;
+            font-size: 29px;
+            font-weight: 800;
         }
 
-        .pricing-card ul {
-            text-align: left;
-            line-height: 2;
-            padding-left: 22px;
-            margin-bottom: 25px;
+        .price-card ul {
+            padding-left: 20px;
+            margin: 10px 0 22px;
         }
 
-        .pricing-button {
-            display: block;
+        .price-card .button {
             margin-top: auto;
-            background: #1877f2;
-            color: white;
-            padding: 12px;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: bold;
         }
 
-        .pricing-button:hover {
-            background: #123c69;
-        }
-
-        .pricing-note {
-            margin-top: 28px;
-            color: #666;
+        .price-note {
+            margin-top: 22px;
+            text-align: center;
+            color: #647084;
             font-size: 14px;
-            line-height: 1.7;
         }
 
-        /* CONTACT */
-        .contact-cta {
-            max-width: 850px;
-            margin: 35px auto 0;
-            padding: 35px 20px;
-            border-radius: 14px;
-            text-align: center;
-            background: linear-gradient(135deg, #123c69, #087cff);
-            color: white;
-            box-sizing: border-box;
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
         }
 
-        .contact-cta h3,
-        .contact-cta p {
-            color: white;
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            border: 1px solid #e1e7f0;
         }
 
-        .contact-cta p {
-            line-height: 1.8;
-            margin-bottom: 22px;
+        .project-card h3 {
+            margin-bottom: 8px;
+            color: #101a35;
         }
 
-        .contact-cta .project-link {
-            background: #25d366;
+        .project-card p {
+            margin-bottom: 18px;
+            color: #647084;
         }
 
-        .contact-cta .project-link:hover {
-            background: #169b48;
+        .project-card .button {
+            margin-top: auto;
         }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 30px auto 0;
-            text-align: left;
-        }
-
-        .contact-form label {
-            display: block;
-            margin: 15px 0 7px;
+        .status-label {
+            display: inline-block;
+            padding: 4px 10px;
+            margin-bottom: 12px;
+            border-radius: 20px;
+            background: #fff0c2;
+            color: #765000;
+            font-size: 12px;
             font-weight: bold;
         }
 
-        .contact-form input,
-        .contact-form textarea {
-            display: block;
-            box-sizing: border-box;
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font: inherit;
+        /* =========================
+           TESTIMONIALS
+        ========================= */
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: 2px solid #087cff;
-            border-color: transparent;
+        .testimonial-card {
+            padding: 22px;
+            background: white;
+            border: 1px solid #e1e7f0;
+            border-radius: 10px;
         }
 
-        .contact-form button {
-            width: 100%;
-            padding: 14px;
+        .stars {
+            color: #d49a00;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-card h3 {
             margin-top: 12px;
-            border: none;
-            border-radius: 6px;
-            color: white;
             font-size: 16px;
+        }
+
+        .sample-note {
+            margin-top: 20px;
+            text-align: center;
+            color: #647084;
+            font-size: 13px;
+        }
+
+        /* =========================
+           FORMS
+        ========================= */
+
+        .forms-section {
+            background: #edf3fa;
+        }
+
+        .forms-intro {
+            max-width: 780px;
+            margin: 0 auto 30px;
+            text-align: center;
+            color: #647084;
+        }
+
+        .form-panel {
+            max-width: 760px;
+            margin: 0 auto 28px;
+            padding: 26px;
+            background: white;
+            border: 1px solid #dce4ef;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(16, 26, 53, 0.04);
+        }
+
+        .form-panel h3 {
+            margin-bottom: 6px;
+            color: #101a35;
+            font-size: 23px;
+        }
+
+        .form-description {
+            margin-bottom: 20px;
+            color: #647084;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 17px;
+        }
+
+        .form-group {
+            min-width: 0;
+            margin-bottom: 17px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #263247;
             font-weight: bold;
-            cursor: pointer;
         }
 
-        #emailButton {
-            background: #1877f2;
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            display: block;
+            width: 100%;
+            min-width: 0;
+            min-height: 46px;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            background: white;
+            color: #263247;
+            font-size: 16px;
         }
 
-        #whatsappButton {
-            background: #25d366;
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
         }
 
-        .contact-email {
-            text-align: center;
-            overflow-wrap: anywhere;
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: 2px solid #80caff;
+            outline-offset: 1px;
+            border-color: #087fdb;
         }
 
-        /* SOCIAL MEDIA */
-        .social-media {
-            padding: 35px 15px;
-            text-align: center;
-            background: #f4f7fb;
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
         }
+
+        .form-actions button {
+            flex: 1 1 200px;
+        }
+
+        .form-status {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #263247;
+        }
+
+        .privacy-note {
+            margin-top: 14px;
+            color: #647084;
+            font-size: 13px;
+        }
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
 
         .social-links {
             display: flex;
@@ -466,148 +569,71 @@
             margin-top: 20px;
         }
 
-        .social-link {
-            display: inline-block;
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 10px 17px;
+            border-radius: 7px;
+            background: #25385e;
             color: white;
-            padding: 14px 22px;
-            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .social-link:hover {
-            opacity: 0.85;
+        .social-links a:hover {
+            background: #087fdb;
         }
 
-        .tiktok-link {
-            background: #111;
-        }
+        /* =========================
+           FOOTER
+        ========================= */
 
-        .facebook-link {
-            background: #1877f2;
-        }
-
-        .whatsapp-link {
-            background: #25d366;
-        }
-
-        /* TESTIMONIALS */
-        .testimonials-section {
-            padding: 50px 20px;
+        .site-footer {
+            padding: 30px 20px;
             text-align: center;
-            background: white;
+            background: #101a35;
+            color: #e0e9f8;
         }
 
-        .testimonials-section h2 {
-            color: #123b70;
-            font-size: 30px;
+        .site-footer p + p {
+            margin-top: 8px;
         }
 
-        .testimonials-intro {
-            max-width: 650px;
-            margin: 0 auto 30px;
-            color: #555;
-            line-height: 1.7;
+        .site-footer a {
+            color: #83d0ff;
         }
 
-        .testimonials-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 22px;
-        }
-
-        .testimonial-card {
-            background: #f4f7fb;
-            border-radius: 12px;
-            padding: 25px;
-            box-sizing: border-box;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-stars {
-            color: #f4b400;
-            font-size: 23px;
-            letter-spacing: 3px;
-        }
-
-        .testimonial-card p {
-            color: #444;
-            line-height: 1.7;
-            font-style: italic;
-        }
-
-        .testimonial-card h3 {
-            color: #123b70;
-            font-size: 17px;
-        }
-
-        .testimonial-card span {
-            color: #666;
-            font-size: 14px;
-        }
-
-        .sample-note {
-            margin-top: 25px;
-            color: #777;
-            font-size: 13px;
-            line-height: 1.6;
-        }
-
-        /* FLOATING WHATSAPP */
         .floating-whatsapp {
             position: fixed;
-            right: 18px;
-            bottom: 20px;
-            z-index: 999;
-            display: flex;
+            right: 16px;
+            bottom: 16px;
+            z-index: 900;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: #25d366;
+            justify-content: center;
+            min-height: 50px;
+            padding: 12px 17px;
+            border-radius: 28px;
+            background: #128c45;
             color: white;
-            padding: 13px 18px;
-            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .floating-whatsapp:hover {
-            background: #128c7e;
-        }
+        /* =========================
+           TABLET AND PHONE
+        ========================= */
 
-        /* BACK TO TOP */
-        #backToTop {
-            display: none;
-            position: fixed;
-            left: 18px;
-            bottom: 20px;
-            z-index: 998;
-            padding: 12px 16px;
-            border: none;
-            border-radius: 30px;
-            background: #087cff;
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .brand-header {
-                justify-content: center;
-            }
-
-            .navbar {
-                flex-direction: column;
-                align-items: stretch;
-                padding: 10px 15px;
-            }
-
+        @media (max-width: 900px) {
             .menu-toggle {
                 display: block;
-                align-self: flex-end;
+            }
+
+            .header-inner {
+                position: relative;
             }
 
             .nav-links {
@@ -615,8 +641,9 @@
                 flex-direction: column;
                 align-items: stretch;
                 width: 100%;
-                gap: 3px;
-                padding-top: 10px;
+                gap: 0;
+                padding: 8px 0;
+                background: #101a35;
             }
 
             .nav-links.show {
@@ -626,55 +653,96 @@
             .nav-links li,
             .nav-links a {
                 width: 100%;
-                box-sizing: border-box;
-                text-align: center;
             }
 
-            .welcome-sanchez {
-                padding: 50px 15px;
+            .nav-links a {
+                padding: 13px 10px;
             }
 
-            .welcome-button {
-                max-width: 100%;
-                box-sizing: border-box;
+            .services-grid,
+            .pricing-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .logo-text h2 {
-                font-size: 20px;
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 43px 15px;
             }
 
-            .logo-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
+            .header-inner {
+                padding: 10px 14px;
             }
 
-            .contact-cta {
-                margin-left: 10px;
-                margin-right: 10px;
+            .brand-main {
+                font-size: 19px;
+            }
+
+            .brand-sub {
+                font-size: 10px;
+            }
+
+            .welcome {
+                min-height: auto;
+                padding: 65px 17px;
+            }
+
+            .welcome-buttons {
+                flex-direction: column;
+            }
+
+            .welcome-buttons .button {
+                width: 100%;
+            }
+
+            .services-grid,
+            .pricing-grid,
+            .projects-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: auto;
+            }
+
+            .form-panel {
+                padding: 18px;
+            }
+
+            .about-content {
+                padding: 19px;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .form-actions button {
+                width: 100%;
+                flex-basis: auto;
             }
 
             .floating-whatsapp {
                 right: 10px;
-                bottom: 12px;
-                padding: 11px 13px;
-                font-size: 13px;
-            }
-
-            #backToTop {
-                left: 10px;
-                bottom: 12px;
-                padding: 10px 12px;
-                font-size: 12px;
+                bottom: 10px;
+                padding: 10px 13px;
+                font-size: 14px;
             }
         }
 
         @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
             *,
             *::before,
             *::after {
-                scroll-behavior: auto !important;
-                animation-duration: 0.01ms !important;
                 transition-duration: 0.01ms !important;
             }
         }
@@ -683,724 +751,1394 @@
 
 <body>
 
-    <!-- BRAND HEADER -->
-    <header class="brand-header" id="top">
-        <a href="#home" class="brand-logo"
-           aria-label="Digital Vision Technologies Home">
-            <div class="logo-icon">DV</div>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-            <div class="logo-text">
-                <h2>Digital Vision</h2>
-                <p>TECHNOLOGIES</p>
-            </div>
-        </a>
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="#home" class="brand" aria-label="Digital Vision Technologies home">
+                <span class="brand-main">DV | Digital Vision</span>
+                <span class="brand-sub">TECHNOLOGIES</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#orderForm">Order</a></li>
+                    <li><a href="#bookingForm">Booking</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
-    <!-- WELCOME VOICE BUTTON -->
-    <div class="listen-area">
-        <button type="button" id="welcomeButton">
-            <span id="listenIcon" aria-hidden="true">🔊</span>
-            <span id="listenText">Click to Listen to Our Welcome</span>
-        </button>
+    <main>
 
-        <p id="welcomeStatus" aria-live="polite">
-            Click the button to hear a welcome message from Digital Vision Technologies.
-        </p>
-    </div>
+        <!-- =========================
+             HOME
+        ========================= -->
 
-    <!-- NAVIGATION -->
-   <nav class="navbar" aria-label="Main navigation">
+        <section class="welcome" id="home">
+            <div class="container welcome-content">
 
-```
-<button
-    class="menu-toggle"
-    id="menuToggle"
-    type="button"
-    aria-label="Open navigation menu"
-    aria-expanded="false"
-    aria-controls="navLinks">
-    ☰
-</button>
+                <span class="welcome-label">WELCOME TO</span>
 
-<ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
-```
+                <h1>SANCHEZ GLEIN</h1>
 
-</nav>
+                <h2>DIGITAL VISION TECHNOLOGIES</h2>
 
-    <!-- WELCOME / HOME -->
-    <section id="home" class="welcome-sanchez">
-        <div class="welcome-content">
-            <p class="welcome-label">WELCOME TO</p>
+                <h3>Your Vision, Our Digital Creativity!</h3>
 
-            <h1>SANCHEZ GLEIN</h1>
+                <button
+                    type="button"
+                    class="listen-button"
+                    id="welcomeVoice">
+                    🔊 Click to Listen to Our Welcome
+                </button>
 
-            <h2>DIGITAL VISION TECHNOLOGIES</h2>
+                <p id="welcomeStatus" aria-live="polite">
+                    Click the button to hear a welcome message from Digital Vision Technologies.
+                </p>
 
-            <p class="welcome-message">
+                <p>
+                    We build modern, professional websites for schools,
+                    businesses, churches, and community organizations.
+                    We also provide computer services and digital skills
+                    training. Let's bring your ideas to life online.
+                </p>
+
+                <div class="welcome-buttons">
+                    <a href="#projects" class="button">
+                        EXPLORE OUR PROJECTS
+                    </a>
+
+                    <a
+                        href="https://wa.me/254707615977?text=Hello%20Sanchez%20Glein%20Digital%20Vision%20Technologies"
+                        class="button button-green"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        CONTACT US ON WHATSAPP
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <section id="about">
+            <div class="container">
+
+                <h2 class="section-title">About Us</h2>
+
+                <div class="about-content">
+                    <p>
+                        Digital Vision Technologies provides website
+                        development and digital support services to help
+                        individuals, businesses, schools, churches, and
+                        organizations establish their online presence.
+                    </p>
+
+                    <p>
+                        We are committed to creating useful, attractive,
+                        and mobile-friendly websites. Our services also
+                        include document formatting, spreadsheet
+                        preparation, data entry, computer support, and
+                        beginner coding lessons.
+                    </p>
+
+                    <p>
+                        Our goal is to help people and organizations use
+                        technology to learn, work, communicate, and grow.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================
+             SERVICES
+        ========================= -->
+
+        <section id="services">
+            <div class="container">
+
+                <h2 class="section-title">Our Services</h2>
+
+                <p class="section-intro">
+                    Practical digital solutions to help you learn, work,
+                    and grow.
+                </p>
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon">🏫</div>
+                        <h3>School Websites</h3>
+                        <p>
+                            School information, announcements, photo
+                            galleries, and contact pages.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h3>Business Websites</h3>
+                        <p>
+                            Showcase your business, products, services,
+                            and contact information.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">⛪</div>
+                        <h3>Church & Community Websites</h3>
+                        <p>
+                            Share events, projects, announcements, and
+                            community activities.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">👨‍💻</div>
+                        <h3>Personal Websites</h3>
+                        <p>
+                            Professional portfolios and personal
+                            websites to showcase your work.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">📄</div>
+                        <h3>Microsoft Word</h3>
+                        <p>
+                            Document typing, formatting, reports,
+                            letters, and CV preparation.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Excel & Data Entry</h3>
+                        <p>
+                            Spreadsheet organization, data entry, and
+                            basic data management.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h3>Computer Packages & Coding</h3>
+                        <p>
+                            Beginner lessons in HTML, CSS, JavaScript,
+                            Python, Supabase, GitHub, and other digital skills.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">📝</div>
+                        <h3>Online Application Assistance</h3>
+                        <p>
+                            Assistance with online applications and
+                            completing digital forms.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🛠️</div>
+                        <h3>Computer Services</h3>
+                        <p>
+                            Basic computer software support, website
+                            updates, and digital guidance.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             PRICING
+        ========================= -->
+
+        <section id="pricing">
+            <div class="container">
+
+                <h2 class="section-title">Our Services & Pricing</h2>
+
+                <p class="section-intro">
+                    Affordable website development and computer services
+                    for individuals, businesses, schools, and organizations.
+                </p>
+
+                <div class="pricing-grid">
+
+                    <article class="price-card">
+                        <h3>Basic Website</h3>
+                        <div class="price">KSh 5,000</div>
+
+                        <p>Ideal for individuals and small businesses.</p>
+
+                        <ul>
+                            <li>Simple website design</li>
+                            <li>Home page and contact details</li>
+                            <li>Mobile-friendly layout</li>
+                            <li>Social media links</li>
+                        </ul>
+
+                        <a
+                            href="#orderForm"
+                            class="button order-link"
+                            data-service="Basic Website">
+                            Order Basic Website
+                        </a>
+                    </article>
+
+                    <article class="price-card">
+                        <h3>Business Website</h3>
+                        <div class="price">KSh 10,000</div>
+
+                        <p>For growing businesses and organizations.</p>
+
+                        <ul>
+                            <li>Up to 5 pages</li>
+                            <li>Services and project gallery</li>
+                            <li>Contact form</li>
+                            <li>Social media integration</li>
+                        </ul>
+
+                        <a
+                            href="#orderForm"
+                            class="button order-link"
+                            data-service="Business Website">
+                            Order Business Website
+                        </a>
+                    </article>
+
+                    <article class="price-card">
+                        <h3>Advanced Website</h3>
+                        <div class="price">KSh 20,000+</div>
+
+                        <p>For schools, churches, and larger organizations.</p>
+
+                        <ul>
+                            <li>Custom website features</li>
+                            <li>Multiple pages</li>
+                            <li>Optional database integration</li>
+                            <li>Project-specific requirements</li>
+                        </ul>
+
+                        <a
+                            href="#orderForm"
+                            class="button order-link"
+                            data-service="Advanced Website">
+                            Request a Quote
+                        </a>
+                    </article>
+
+                </div>
+
+                <p class="price-note">
+                    Computer services are quoted according to the work
+                    required. Prices are starting prices in Kenyan
+                    shillings. Final costs depend on agreed features,
+                    content, hosting, and other project requirements.
+                </p>
+
+                <div style="text-align:center; margin-top:22px;">
+                    <a
+                        href="#orderForm"
+                        class="button button-dark order-link"
+                        data-service="Computer Services">
+                        Request Computer Services
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================
+             PROJECTS
+        ========================= -->
+
+        <section id="projects">
+            <div class="container">
+
+                <h2 class="section-title">Our Projects</h2>
+
+                <p class="section-intro">
+                    Explore examples of our website development work
+                    and digital projects.
+                </p>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <h3>Western Legend Youth Group</h3>
+
+                        <p>
+                            A community website showcasing the group's
+                            information, activities, and future projects.
+                        </p>
+
+                        <a
+                            href="https://western-legends-youth-group.netlify.app/"
+                            class="button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View Website →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>School Modern Library System</h3>
+
+                        <p>
+                            A library management project in development
+                            to support book borrowing, student records,
+                            and library resources.
+                        </p>
+
+                        <span class="status-label">IN DEVELOPMENT</span>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>School Website Demo</h3>
+
+                        <p>
+                            A sample website for schools to display
+                            school information, announcements, and
+                            contact details.
+                        </p>
+
+                        <a
+                            href="school-demo.html"
+                            class="button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View School Demo →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Business Website Demo</h3>
+
+                        <p>
+                            A sample business website showcasing
+                            products, services, and customer contact
+                            information.
+                        </p>
+
+                        <a
+                            href="bussines-demo.html"
+                            class="button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View Business Demo →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Church Website Demo</h3>
+
+                        <p>
+                            A sample church website showcasing church
+                            information, ministries, events, and
+                            contact details.
+                        </p>
+
+                        <a
+                            href="church-demo.html"
+                            class="button"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View Church Demo →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             TESTIMONIALS
+        ========================= -->
+
+        <section id="testimonials">
+            <div class="container">
+
+                <h2 class="section-title">What Our Customers Say</h2>
+
+                <p class="section-intro">
+                    We believe in quality, creativity, and helping
+                    customers grow through technology.
+                </p>
+
+                <div class="testimonials-grid">
+
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "The team was professional and helped me
+                            understand how a website can support my business."
+                        </p>
+
+                        <h3>Sample Business Customer</h3>
+                        <p>Business Website</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "I appreciate the focus on clear design,
+                            useful information, and a good experience
+                            for visitors."
+                        </p>
+
+                        <h3>Sample Project Customer</h3>
+                        <p>Website Design</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            "Digital services can make it easier for
+                            organizations to share information and reach
+                            more people."
+                        </p>
+
+                        <h3>Sample Organization Customer</h3>
+                        <p>Digital Solutions</p>
+                    </article>
+
+                </div>
+
+                <p class="sample-note">
+                    These are sample testimonials for demonstration
+                    purposes, not verified customer reviews. Replace
+                    them with genuine customer feedback when available.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- =========================
+             FORM 1: CONTACT
+        ========================= -->
+
+        <section id="contact" class="forms-section">
+            <div class="container">
+
+                <h2 class="section-title">Contact Us</h2>
+
+                <p class="forms-intro">
+                    Need a website or computer services? Fill in the
+                    contact form to send us your inquiry.
+                </p>
+
+                <div class="form-panel">
+
+                    <h3>📩 Contact Form</h3>
+
+                    <p class="form-description">
+                        Tell us how we can help you.
+                    </p>
+
+                    <form id="contactForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input
+                                    id="contactName"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    maxlength="100"
+                                    placeholder="Enter your full name"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input
+                                    id="contactEmail"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    maxlength="150"
+                                    placeholder="you@example.com"
+                                    required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="contactPhone">Phone Number *</label>
+                                <input
+                                    id="contactPhone"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    maxlength="30"
+                                    placeholder="Enter your phone number"
+                                    required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="contactMessage">Your Message *</label>
+                                <textarea
+                                    id="contactMessage"
+                                    name="message"
+                                    maxlength="3000"
+                                    placeholder="Tell us about your inquiry"
+                                    required></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <button
+                                type="submit"
+                                class="button">
+                                Send by Email
+                            </button>
+
+                            <button
+                                type="button"
+                                id="contactWhatsApp"
+                                class="button button-green">
+                                Send by WhatsApp
+                            </button>
+                        </div>
+
+                        <p
+                            class="form-status"
+                            id="contactStatus"
+                            aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+                <!-- =========================
+                     FORM 2: WEBSITE ORDER
+                ========================= -->
+
+                <div class="form-panel" id="orderForm">
+
+                    <h3>💻 Website Order Form</h3>
+
+                    <p class="form-description">
+                        Choose a package and tell us what kind of website
+                        you want. Submitting this form requests a quotation
+                        or discussion; it does not make a payment.
+                    </p>
+
+                    <form id="websiteOrderForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="orderName">Full Name *</label>
+                                <input
+                                    id="orderName"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    maxlength="100"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="orderPhone">Phone Number *</label>
+                                <input
+                                    id="orderPhone"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    maxlength="30"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="orderEmail">Email Address</label>
+                                <input
+                                    id="orderEmail"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    maxlength="150">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="orderService">Select Service *</label>
+                                <select
+                                    id="orderService"
+                                    name="service"
+                                    required>
+
+                                    <option value="">Choose a service</option>
+                                    <option value="Basic Website">Basic Website — KSh 5,000</option>
+                                    <option value="Business Website">Business Website — KSh 10,000</option>
+                                    <option value="Advanced Website">Advanced Website — KSh 20,000+</option>
+                                    <option value="Computer Services">Computer Services — Request a quote</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="orderBusiness">Business or Organization</label>
+                                <input
+                                    id="orderBusiness"
+                                    name="business"
+                                    type="text"
+                                    maxlength="150"
+                                    placeholder="Optional">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="orderPages">Estimated Pages</label>
+                                <select id="orderPages" name="pages">
+                                    <option value="Not sure">Not sure yet</option>
+                                    <option value="1-3 pages">1–3 pages</option>
+                                    <option value="4-5 pages">4–5 pages</option>
+                                    <option value="6 or more pages">6 or more pages</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="orderDetails">Project Details *</label>
+                                <textarea
+                                    id="orderDetails"
+                                    name="details"
+                                    maxlength="3000"
+                                    placeholder="Describe the website or computer service you need"
+                                    required></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <button
+                                type="submit"
+                                class="button button-green">
+                                Send Order Request on WhatsApp
+                            </button>
+                        </div>
+
+                        <p
+                            class="form-status"
+                            id="orderStatus"
+                            aria-live="polite"></p>
+
+                    </form>
+
+                </div>
+
+                <!-- =========================
+                     FORM 3: CUSTOMER REGISTRATION
+                ========================= -->
+
+                <div class="form-panel" id="registrationForm">
+
+                    <h3>📝 Customer Registration Form</h3>
+
+                    <p class="form-description">
+                        Register your contact details so we can identify
+                        your service inquiry and communicate with you.
+                    </p>
+
+                    <form id="customerRegistrationForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="registrationName">Full Name *</label>
+                                <input
+                                    id="registrationName"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    maxlength="100"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registrationPhone">Phone Number *</label>
+                                <input
+                                    id="registrationPhone"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    maxlength="30"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registrationEmail">Email Address *</label>
+                                <input
+                                    id="registrationEmail"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    maxlength="150"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="registrationType">Customer Type *</label>
+                                <select
+                                    id="registrationType"
+                                    name="customerType"
+                                    required>
+
+                                    <option value="">Select customer type</option>
+                                    <option value="Individual">Individual</option>
+                                    <option value="Business">Business</option>
+                                    <option value="School">School</option>
+                                    <option value="Church">Church</option>
+                                    <option value="Community Organization">Community Organization</option>
+                                    <option value="Other Organization">Other Organization</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="registrationService">Service of Interest *</label>
+                                <select
+                                    id="registrationService"
+                                    name="service"
+                                    required>
+
+                                    <option value="">Select a service</option>
+                                    <option value="Website Development">Website Development</option>
+                                    <option value="Computer Services">Computer Services</option>
+                                    <option value="Computer Training">Computer Training</option>
+                                    <option value="Coding Lessons">Coding Lessons</option>
+                                    <option value="Data Entry and Document Formatting">Data Entry and Document Formatting</option>
+                                    <option value="Other Services">Other Services</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="registrationNotes">Additional Information</label>
+                                <textarea
+                                    id="registrationNotes"
+                                    name="notes"
+                                    maxlength="2000"
+                                    placeholder="Optional: tell us more about your needs"></textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        id="registrationConsent"
+                                        required>
+                                    I agree that Digital Vision Technologies
+                                    may use these details to respond to my inquiry.
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <button
+                                type="submit"
+                                class="button">
+                                Send Registration on WhatsApp
+                            </button>
+                        </div>
+
+                        <p
+                            class="form-status"
+                            id="registrationStatus"
+                            aria-live="polite"></p>
+
+                        <p class="privacy-note">
+                            Please do not submit passwords, national ID
+                            numbers, payment details, or other sensitive
+                            information through this form.
+                        </p>
+
+                    </form>
+
+                </div>
+
+                <!-- =========================
+                     FORM 4: BOOKING
+                ========================= -->
+
+                <div class="form-panel" id="bookingForm">
+
+                    <h3>📅 Service Booking Form</h3>
+
+                    <p class="form-description">
+                        Request a convenient date and time to discuss
+                        your website or computer service.
+                    </p>
+
+                    <form id="serviceBookingForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="bookingName">Full Name *</label>
+                                <input
+                                    id="bookingName"
+                                    name="name"
+                                    type="text"
+                                    autocomplete="name"
+                                    maxlength="100"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingPhone">Phone Number *</label>
+                                <input
+                                    id="bookingPhone"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    maxlength="30"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingEmail">Email Address</label>
+                                <input
+                                    id="bookingEmail"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    maxlength="150">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingService">Service Required *</label>
+                                <select
+                                    id="bookingService"
+                                    name="service"
+                                    required>
+
+                                    <option value="">Select a service</option>
+                                    <option value="Website Consultation">Website Consultation</option>
+                                    <option value="Website Development">Website Development</option>
+                                    <option value="Computer Services">Computer Services</option>
+                                    <option value="Computer Training">Computer Training</option>
+                                    <option value="Coding Lessons">Coding Lessons</option>
+                                    <option value="Other Services">Other Services</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingDate">Preferred Date *</label>
+                                <input
+                                    id="bookingDate"
+                                    name="date"
+                                    type="date"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingTime">Preferred Time *</label>
+                                <input
+                                    id="bookingTime"
+                                    name="time"
+                                    type="time"
+                                    required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="bookingNotes">Additional Details</label>
+                                <textarea
+                                    id="bookingNotes"
+                                    name="notes"
+                                    maxlength="2000"
+                                    placeholder="Tell us what you would like to discuss"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <button
+                                type="submit"
+                                class="button button-green">
+                                Request Booking on WhatsApp
+                            </button>
+                        </div>
+
+                        <p
+                            class="form-status"
+                            id="bookingStatus"
+                            aria-live="polite"></p>
+
+                        <p class="privacy-note">
+                            This is a booking request, not a confirmed
+                            appointment. We will contact you to confirm
+                            availability.
+                        </p>
+
+                    </form>
+
+                </div>
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="about-content">
+                    <h3>Contact Information</h3>
+
+                    <p><strong>Business:</strong> Digital Vision Technologies</p>
+                    <p><strong>Location:</strong> Kenya</p>
+                    <p><strong>Services:</strong> Website Development & Computer Services</p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:Sanchezmuga93@gmail.com">
+                            Sanchezmuga93@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>WhatsApp:</strong>
+                        <a
+                            href="https://wa.me/254707615977"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            +254 707 615 977
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================
+             SOCIAL MEDIA
+        ========================= -->
+
+        <section id="social">
+            <div class="container">
+
+                <h2 class="section-title">
+                    Connect With Digital Vision Technologies
+                </h2>
+
+                <p class="section-intro">
+                    Follow us for website projects, computer services,
+                    and digital skills.
+                </p>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://vm.tiktok.com/ZS9URBa6W8HmR-pvMWY/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        🎵 TikTok
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61578832533069"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        📘 Facebook
+                    </a>
+
+                    <a
+                        href="https://wa.me/254707615977"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        💬 WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="site-footer">
+        <div class="container">
+
+            <p>
+                &copy; <span id="year"></span>
+                Digital Vision Technologies. All rights reserved.
+            </p>
+
+            <p>
                 Your Vision, Our Digital Creativity!
             </p>
 
-            <p class="welcome-description">
-                We build modern, professional websites for schools,
-                businesses, churches, and community organizations.
-                We also provide computer services and digital skills training.
-                Let's bring your ideas to life online.
-            </p>
-
-            <a href="#projects" class="welcome-button">
-                EXPLORE OUR PROJECTS
-            </a>
-
-            <a
-                href="https://wa.me/254707615977?text=Hello%20Sanchez%20Glein%20Digital%20Vision%20Technologies"
-                class="welcome-button whatsapp-welcome"
-                target="_blank"
-                rel="noopener noreferrer">
-                CONTACT US ON WHATSAPP
-            </a>
         </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
-
-        <p class="section-intro">
-            Digital Vision Technologies provides website development
-            and digital support services to help individuals, businesses,
-            schools, churches, and organizations establish their online presence.
-        </p>
-
-        <p>
-            We are committed to creating useful, attractive, and
-            mobile-friendly websites. Our services also include document
-            formatting, spreadsheet preparation, data entry, computer support,
-            and beginner coding lessons.
-        </p>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section services-section">
-        <h2>Our Services</h2>
-
-        <p class="section-intro">
-            Practical digital solutions to help you learn, work, and grow.
-        </p>
-
-        <div class="service-container">
-            <article class="service-card">
-                <div class="service-icon">🏫</div>
-                <h3>School Websites</h3>
-                <p>
-                    School information, announcements, photo galleries,
-                    and contact pages.
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon">🏢</div>
-                <h3>Business Websites</h3>
-                <p>
-                    Showcase your business, products, services,
-                    and contact information.
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon">⛪</div>
-                <h3>Church & Community Websites</h3>
-                <p>
-                    Share events, projects, announcements,
-                    and community activities.
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon">👨‍💻</div>
-                <h3>Personal Websites</h3>
-                <p>
-                    Professional portfolios and personal websites
-                    to showcase your work.
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon">📄</div>
-                <h3>Microsoft Word</h3>
-                <p>
-                    Document typing, formatting, reports, letters,
-                    and CV preparation.
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon">📊</div>
-                <h3>Excel & Data Entry</h3>
-                <p>
-                    Spreadsheet organization, data entry,
-                    and basic data management.
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon">💻</div>
-                <h3>Computer Packages & Coding</h3>
-                <p>
-                    Beginner lessons in HTML, CSS, JavaScript, Python,
-                    Supabase, GitHub, and other digital skills.
-                </p>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon">📝</div>
-                <h3>Online Application Assistance</h3>
-                <p>
-                    Assistance with online applications and completing
-                    digital forms.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="pricing-section">
-        <h2>Our Services & Pricing</h2>
-
-        <p class="pricing-intro">
-            We offer affordable website development and computer services
-            for individuals, businesses, schools, and organizations.
-        </p>
-
-        <div class="pricing-container">
-
-            <article class="pricing-card">
-                <h3>Basic Website</h3>
-                <p class="price">KSh 5,000</p>
-                <p>Ideal for individuals and small businesses.</p>
-
-                <ul>
-                    <li>Simple website design</li>
-                    <li>Home page and contact details</li>
-                    <li>Mobile-friendly layout</li>
-                    <li>Social media links</li>
-                </ul>
-
-                <a class="pricing-button"
-                   href="#contact"
-                   data-service="Basic Website">
-                    Order Basic Website
-                </a>
-            </article>
-
-            <article class="pricing-card featured">
-                <h3>Business Website</h3>
-                <p class="price">KSh 10,000</p>
-                <p>For growing businesses and organizations.</p>
-
-                <ul>
-                    <li>Up to 5 pages</li>
-                    <li>Services and project gallery</li>
-                    <li>Contact form</li>
-                    <li>Social media integration</li>
-                </ul>
-
-                <a class="pricing-button"
-                   href="#contact"
-                   data-service="Business Website">
-                    Order Business Website
-                </a>
-            </article>
-
-            <article class="pricing-card">
-                <h3>Advanced Website</h3>
-                <p class="price">KSh 20,000+</p>
-                <p>For schools, churches, and larger organizations.</p>
-
-                <ul>
-                    <li>Custom website features</li>
-                    <li>Multiple pages</li>
-                    <li>Optional database integration</li>
-                    <li>Project-specific requirements</li>
-                </ul>
-
-                <a class="pricing-button"
-                   href="#contact"
-                   data-service="Advanced Website">
-                    Request a Quote
-                </a>
-            </article>
-
-            <article class="pricing-card">
-                <h3>Computer Services</h3>
-                <p class="price">Ask for a Quote</p>
-                <p>Practical computer and digital support.</p>
-
-                <ul>
-                    <li>Computer software support</li>
-                    <li>Basic computer training</li>
-                    <li>Website updates</li>
-                    <li>Digital skills guidance</li>
-                </ul>
-
-                <a class="pricing-button"
-                   href="#contact"
-                   data-service="Computer Services">
-                    Request Computer Services
-                </a>
-            </article>
-
-        </div>
-
-        <p class="pricing-note">
-            Prices are starting prices in Kenyan shillings. Final costs
-            depend on the agreed features, content, hosting, and other
-            project requirements.
-        </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section projects-section">
-        <h2>Our Projects</h2>
-
-        <p class="section-intro">
-            Explore examples of our website development work and digital projects.
-        </p>
-
-        <div class="project-container">
-
-            <article class="project-card">
-                <h3>Western Legend Youth Group</h3>
-
-                <p>
-                    A community website showcasing the group's information,
-                    activities, and future projects.
-                </p>
-
-                <a
-                    href="https://western-legends-youth-group.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-link">
-                    View Website →
-                </a>
-            </article>
-
-            <article class="project-card">
-                <h3>School Modern Library System</h3>
-
-                <p>
-                    A library management project in development to support
-                    book borrowing, student records, and library resources.
-                </p>
-
-                <span class="project-status">In Development</span>
-            </article>
-
-            <article class="project-card">
-                <h3>School Website Demo</h3>
-
-                <p>
-                    A sample website for schools to display school information,
-                    announcements, and contact details.
-                </p>
-
-                <a href="school-demo.html" class="project-link">
-                    View School Demo →
-                </a>
-            </article>
-
-            <article class="project-card">
-                <h3>Business Website Demo</h3>
-
-                <p>
-                    A sample business website showcasing products,
-                    services, and customer contact information.
-                </p>
-
-                <a href="bussines-demo.html" class="project-link">
-                    View Business Demo →
-                </a>
-            </article>
-
-            <article class="project-card">
-                <h3>Church Website Demo</h3>
-
-                <p>
-                    A sample church website showcasing church information,
-                    ministries, events, and contact details.
-                </p>
-
-                <a href="church-demo.html" class="project-link">
-                    View Church Demo →
-                </a>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="testimonials-section">
-        <h2>What Our Customers Say</h2>
-
-        <p class="testimonials-intro">
-            We believe in quality, creativity, and helping our customers
-            grow through technology.
-        </p>
-
-        <div class="testimonials-container">
-
-            <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="Five stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "The team was professional and helped me understand
-                    how a website can support my business."
-                </p>
-
-                <h3>Sample Business Customer</h3>
-                <span>Business Website</span>
-            </article>
-
-            <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="Five stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "I appreciate the focus on clear design, useful
-                    information, and a good experience for visitors."
-                </p>
-
-                <h3>Sample Project Customer</h3>
-                <span>Website Design</span>
-            </article>
-
-            <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="Five stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "Digital services can make it easier for organizations
-                    to share information and reach more people."
-                </p>
-
-                <h3>Sample Organization Customer</h3>
-                <span>Digital Solutions</span>
-            </article>
-
-        </div>
-
-        <p class="sample-note">
-            These are sample testimonials for demonstration purposes,
-            not verified customer reviews. Replace them with genuine
-            customer feedback when available.
-        </p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact-section">
-        <h2>Contact Us</h2>
-
-        <p class="section-intro">
-            Do you need a website or computer services?
-            Send us a message so we can discuss your project.
-        </p>
-
-        <div class="contact-details">
-            <p><strong>Business:</strong> Digital Vision Technologies</p>
-            <p><strong>Location:</strong> Kenya</p>
-            <p>
-                <strong>Services:</strong>
-                Website Development & Computer Services
-            </p>
-        </div>
-
-        <form id="contactForm" class="contact-form">
-            <label for="customerName">Your Name</label>
-            <input
-                id="customerName"
-                name="customerName"
-                type="text"
-                placeholder="Enter your name"
-                autocomplete="name"
-                required>
-
-            <label for="customerEmail">Your Email</label>
-            <input
-                id="customerEmail"
-                name="customerEmail"
-                type="email"
-                placeholder="Enter your email"
-                autocomplete="email"
-                required>
-
-            <label for="customerMessage">Your Message</label>
-            <textarea
-                id="customerMessage"
-                name="customerMessage"
-                rows="5"
-                placeholder="Tell us about the website or service you need"
-                required></textarea>
-
-            <button type="button" id="emailButton">
-                Send by Email
-            </button>
-
-            <button type="button" id="whatsappButton">
-                Send by WhatsApp
-            </button>
-        </form>
-
-        <p class="contact-email">
-            Email:
-            <a href="mailto:Sanchezmuga93@gmail.com">
-                Sanchezmuga93@gmail.com
-            </a>
-        </p>
-
-        <div class="contact-cta">
-            <h3>Need a Website for Your Organization?</h3>
-
-            <p>
-                We can help you create a professional website for your school,
-                business, church, or community group.
-            </p>
-
-            <a
-                href="https://wa.me/254707615977?text=Hello%20Digital%20Vision%20Technologies%2C%20I%20need%20a%20website."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="project-link">
-                Request a Website on WhatsApp
-            </a>
-        </div>
-    </section>
-
-    <!-- SOCIAL MEDIA -->
-    <section id="social-media" class="social-media">
-        <h2>Connect With Digital Vision Technologies</h2>
-
-        <p>
-            Follow us for website projects, computer services,
-            and digital skills.
-        </p>
-
-        <div class="social-links">
-            <a
-                href="https://vm.tiktok.com/ZS9URBa6W8HmR-pvMWY/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link tiktok-link">
-                🎵 TikTok
-            </a>
-
-            <a
-                href="https://www.facebook.com/profile.php?id=61578832533069"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link facebook-link">
-                📘 Facebook
-            </a>
-
-            <a
-                href="https://wa.me/254707615977"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link whatsapp-link">
-                💬 WhatsApp
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>
-            &copy; <span id="year"></span>
-            Digital Vision Technologies. All rights reserved.
-        </p>
     </footer>
 
-    <!-- BACK TO TOP -->
-    <button id="backToTop" type="button" aria-label="Back to top">
-        ↑ Back to Top
-    </button>
+    <!-- FLOATING WHATSAPP BUTTON -->
 
-    <!-- FLOATING WHATSAPP -->
     <a
-        href="https://wa.me/254707615977?text=Hello%20Digital%20Vision%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
         class="floating-whatsapp"
+        href="https://wa.me/254707615977?text=Hello%20Digital%20Vision%20Technologies%2C%20I%20am%20interested%20in%20your%20services."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Digital Vision Technologies on WhatsApp">
-        <span aria-hidden="true">☎</span>
-        <span>Chat with us</span>
+        💬 Chat with us
     </a>
 
-    <!-- MAIN JAVASCRIPT FILE -->
-    <script src="script.js"></script>
-
-    <!-- PAGE FUNCTIONS -->
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
+        /* =========================
+           MOBILE NAVIGATION
+        ========================= */
 
-        /* WELCOME VOICE */
-        const welcomeButton = document.getElementById("welcomeButton");
-        const listenIcon = document.getElementById("listenIcon");
-        const listenText = document.getElementById("listenText");
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", function () {
+                const isOpen = navLinks.classList.toggle("show");
+
+                menuToggle.textContent = isOpen ? "✕" : "☰";
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Close navigation menu"
+                        : "Open navigation menu"
+                );
+            });
+
+            navLinks.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    navLinks.classList.remove("show");
+
+                    menuToggle.textContent = "☰";
+
+                    menuToggle.setAttribute("aria-expanded", "false");
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+                });
+            });
+        }
+
+        /* =========================
+           CURRENT YEAR
+        ========================= */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        /* =========================
+           WELCOME VOICE
+        ========================= */
+
+        const welcomeVoice = document.getElementById("welcomeVoice");
         const welcomeStatus = document.getElementById("welcomeStatus");
 
-        let isSpeaking = false;
-
-        if (welcomeButton) {
-            welcomeButton.addEventListener("click", function () {
-
+        if (welcomeVoice) {
+            welcomeVoice.addEventListener("click", function () {
                 if (!("speechSynthesis" in window)) {
                     welcomeStatus.textContent =
-                        "Sorry, speech is not supported by this browser.";
+                        "Your browser does not support spoken welcome messages.";
                     return;
                 }
 
-                if (isSpeaking) {
-                    window.speechSynthesis.cancel();
-                    isSpeaking = false;
-
-                    listenIcon.textContent = "🔊";
-                    listenText.textContent = "Listen to Our Welcome";
-                    welcomeStatus.textContent = "Welcome message stopped.";
-                    return;
-                }
+                window.speechSynthesis.cancel();
 
                 const message = new SpeechSynthesisUtterance(
-                    "Welcome to Digital Vision Technologies. " +
-                    "Your trusted partner for website development, " +
-                    "computer services, and digital skills in Kenya. " +
-                    "We build your digital future. Explore our services " +
-                    "and contact us today. Thank you for visiting. " +
-                    "I am Sanchez Muga. How can I help you?"
+                    "Welcome to Sanchez Glein Digital Vision Technologies. " +
+                    "Your vision, our digital creativity. " +
+                    "We build professional websites for schools, businesses, " +
+                    "churches and community organizations. " +
+                    "We also offer computer services and digital skills training. " +
+                    "Thank you for visiting our website."
                 );
 
                 message.lang = "en-KE";
                 message.rate = 0.9;
-                message.pitch = 1.05;
-                message.volume = 1;
+                message.pitch = 1;
 
                 message.onstart = function () {
-                    isSpeaking = true;
-                    listenIcon.textContent = "🔈";
-                    listenText.textContent = "Stop Welcome Message";
                     welcomeStatus.textContent =
-                        "Playing your welcome message...";
+                        "Playing welcome message...";
                 };
 
                 message.onend = function () {
-                    isSpeaking = false;
-                    listenIcon.textContent = "🔊";
-                    listenText.textContent = "Listen Again";
                     welcomeStatus.textContent =
-                        "Thank you for listening to Digital Vision Technologies.";
+                        "Thank you for visiting Digital Vision Technologies!";
                 };
 
                 message.onerror = function () {
-                    isSpeaking = false;
-                    listenIcon.textContent = "🔊";
-                    listenText.textContent = "Try Listening Again";
                     welcomeStatus.textContent =
-                        "Speech could not play. Check your browser sound settings.";
+                        "The welcome voice could not play. Check your device sound.";
                 };
 
-                window.speechSynthesis.cancel();
                 window.speechSynthesis.speak(message);
             });
         }
 
-        /* CONTACT FORM: EMAIL */
-        const form = document.getElementById("contactForm");
+        /* =========================
+           PREFILL ORDER FORM
+        ========================= */
 
-        document.getElementById("emailButton").addEventListener("click", function () {
-            if (!form.reportValidity()) return;
+        document.querySelectorAll(".order-link").forEach(function (link) {
+            link.addEventListener("click", function () {
+                const service = this.getAttribute("data-service");
+                const serviceSelect = document.getElementById("orderService");
 
-            const name = document.getElementById("customerName").value.trim();
-            const email = document.getElementById("customerEmail").value.trim();
-            const message = document.getElementById("customerMessage").value.trim();
-
-            const subject = encodeURIComponent("Website enquiry from " + name);
-
-            const body = encodeURIComponent(
-                "Name: " + name +
-                "\nEmail: " + email +
-                "\n\nMessage:\n" + message
-            );
-
-            window.location.href =
-                "mailto:Sanchezmuga93@gmail.com?subject=" +
-                subject + "&body=" + body;
+                if (service && serviceSelect) {
+                    serviceSelect.value = service;
+                }
+            });
         });
 
-        /* CONTACT FORM: WHATSAPP */
-        document.getElementById("whatsappButton").addEventListener("click", function () {
-            if (!form.reportValidity()) return;
+        /* =========================
+           FORM HELPER FUNCTIONS
+        ========================= */
 
-            const name = document.getElementById("customerName").value.trim();
-            const email = document.getElementById("customerEmail").value.trim();
-            const message = document.getElementById("customerMessage").value.trim();
+        const WHATSAPP_NUMBER = "254707615977";
+        const BUSINESS_EMAIL = "Sanchezmuga93@gmail.com";
 
-            const text = encodeURIComponent(
-                "Hello Digital Vision Technologies!\n\n" +
-                "Name: " + name +
-                "\nEmail: " + email +
-                "\n\nMessage:\n" + message
-            );
+        function getValue(id) {
+            const element = document.getElementById(id);
+            return element ? element.value.trim() : "";
+        }
 
-            window.open(
-                "https://wa.me/254707615977?text=" + text,
+        function openWhatsApp(message, statusElement) {
+            const url =
+                "https://wa.me/" +
+                WHATSAPP_NUMBER +
+                "?text=" +
+                encodeURIComponent(message);
+
+            if (statusElement) {
+                statusElement.textContent =
+                    "Opening WhatsApp. Review your message and press Send.";
+            }
+
+            const newWindow = window.open(
+                url,
                 "_blank",
                 "noopener,noreferrer"
             );
-        });
 
-        /* PREFILL CONTACT MESSAGE FROM PRICING BUTTONS */
-        document.querySelectorAll("[data-service]").forEach(function (button) {
-            button.addEventListener("click", function () {
-                const service = button.getAttribute("data-service");
-                const messageField = document.getElementById("customerMessage");
+            if (!newWindow) {
+                window.location.href = url;
+            }
+        }
 
-                messageField.value =
-                    "Hello Digital Vision Technologies, I am interested in " +
-                    service + ". Please share more details.";
+        function makeMessage(title, fields) {
+            let message = "DIGITAL VISION TECHNOLOGIES\n";
+            message += title + "\n\n";
+
+            fields.forEach(function (field) {
+                message += field[0] + ": " + (field[1] || "Not provided") + "\n";
             });
-        });
 
-        /* COPYRIGHT YEAR */
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+            return message;
+        }
 
-        /* BACK TO TOP */
-        const backToTop = document.getElementById("backToTop");
+        /* =========================
+           CONTACT FORM
+        ========================= */
 
-        window.addEventListener("scroll", function () {
-            backToTop.style.display =
-                window.scrollY > 300 ? "block" : "none";
-        });
+        const contactForm = document.getElementById("contactForm");
+        const contactWhatsApp = document.getElementById("contactWhatsApp");
+        const contactStatus = document.getElementById("contactStatus");
 
-        backToTop.addEventListener("click", function () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+        function getContactMessage() {
+            return makeMessage("CONTACT INQUIRY", [
+                ["Name", getValue("contactName")],
+                ["Email", getValue("contactEmail")],
+                ["Phone", getValue("contactPhone")],
+                ["Message", getValue("contactMessage")]
+            ]);
+        }
+
+        if (contactForm) {
+            contactForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                if (!contactForm.reportValidity()) {
+                    return;
+                }
+
+                const subject = encodeURIComponent(
+                    "Inquiry - Digital Vision Technologies"
+                );
+
+                const body = encodeURIComponent(getContactMessage());
+
+                if (contactStatus) {
+                    contactStatus.textContent =
+                        "Opening your email application. Send the message there to complete delivery.";
+                }
+
+                window.location.href =
+                    "mailto:" + BUSINESS_EMAIL +
+                    "?subject=" + subject +
+                    "&body=" + body;
             });
-        });
+        }
 
-    });
+        if (contactWhatsApp) {
+            contactWhatsApp.addEventListener("click", function () {
+                if (!contactForm.reportValidity()) {
+                    return;
+                }
+
+                openWhatsApp(getContactMessage(), contactStatus);
+            });
+        }
+
+        /* =========================
+           WEBSITE ORDER FORM
+        ========================= */
+
+        const websiteOrderForm =
+            document.getElementById("websiteOrderForm");
+
+        if (websiteOrderForm) {
+            websiteOrderForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                if (!websiteOrderForm.reportValidity()) {
+                    return;
+                }
+
+                const message = makeMessage("WEBSITE ORDER REQUEST", [
+                    ["Name", getValue("orderName")],
+                    ["Phone", getValue("orderPhone")],
+                    ["Email", getValue("orderEmail")],
+                    ["Service", getValue("orderService")],
+                    ["Business or Organization", getValue("orderBusiness")],
+                    ["Estimated Pages", getValue("orderPages")],
+                    ["Project Details", getValue("orderDetails")]
+                ]);
+
+                openWhatsApp(
+                    message,
+                    document.getElementById("orderStatus")
+                );
+            });
+        }
+
+        /* =========================
+           CUSTOMER REGISTRATION FORM
+        ========================= */
+
+        const customerRegistrationForm =
+            document.getElementById("customerRegistrationForm");
+
+        if (customerRegistrationForm) {
+            customerRegistrationForm.addEventListener(
+                "submit",
+                function (event) {
+                    event.preventDefault();
+
+                    if (!customerRegistrationForm.reportValidity()) {
+                        return;
+                    }
+
+                    const message = makeMessage("CUSTOMER REGISTRATION", [
+                        ["Name", getValue("registrationName")],
+                        ["Phone", getValue("registrationPhone")],
+                        ["Email", getValue("registrationEmail")],
+                        ["Customer Type", getValue("registrationType")],
+                        ["Service of Interest", getValue("registrationService")],
+                        ["Additional Information", getValue("registrationNotes")]
+                    ]);
+
+                    openWhatsApp(
+                        message,
+                        document.getElementById("registrationStatus")
+                    );
+                }
+            );
+        }
+
+        /* =========================
+           BOOKING FORM
+        ========================= */
+
+        const serviceBookingForm =
+            document.getElementById("serviceBookingForm");
+
+        const bookingDate = document.getElementById("bookingDate");
+
+        if (bookingDate) {
+            const today = new Date();
+
+            const localDate = [
+                today.getFullYear(),
+                String(today.getMonth() + 1).padStart(2, "0"),
+                String(today.getDate()).padStart(2, "0")
+            ].join("-");
+
+            bookingDate.min = localDate;
+        }
+
+        if (serviceBookingForm) {
+            serviceBookingForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                if (!serviceBookingForm.reportValidity()) {
+                    return;
+                }
+
+                const message = makeMessage("SERVICE BOOKING REQUEST", [
+                    ["Name", getValue("bookingName")],
+                    ["Phone", getValue("bookingPhone")],
+                    ["Email", getValue("bookingEmail")],
+                    ["Service", getValue("bookingService")],
+                    ["Preferred Date", getValue("bookingDate")],
+                    ["Preferred Time", getValue("bookingTime")],
+                    ["Additional Details", getValue("bookingNotes")]
+                ]);
+
+                openWhatsApp(
+                    message,
+                    document.getElementById("bookingStatus")
+                );
+            });
+        }
+
+        console.log(
+            "Digital Vision Technologies website and forms are ready."
+        );
     </script>
 
 </body>
