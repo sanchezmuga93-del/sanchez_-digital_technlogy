@@ -146,6 +146,32 @@
 </head>
 
 <body>
+    </script>
+    <body>
+ 
+    <h1>Welcome to Holistic church malanga website sample 2026 by Sanchez</h1>
+
+    <button id="welcomeButton">🔊 Click to Listen</button>
+
+    <script>
+        const welcomeButton = document.getElementById("welcomeButton");
+
+        welcomeButton.addEventListener("click", function () {
+
+            const message = new SpeechSynthesisUtterance(
+                "Welcome to Holistic Church Malanga Website sample plaese for more information follow me sa sanchezmuga93@gmail.com or in whataspp at 0707615977,facebook or ticktock.Am yours sanchez muga Digital Vision Technology samople.."
+            );
+
+            message.lang = "en-KE";
+            message.rate = 0.9;
+            message.pitch = 1;
+
+            speechSynthesis.cancel();
+            speechSynthesis.speak(message);
+        });
+    </script>
+
+
 
     <header>
         <h1>Holistic church Malanga</h1>
