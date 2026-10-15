@@ -147,6 +147,32 @@
             </div>
         </nav>
     </header>
+    </script>
+    <body>
+ 
+    <h1>Welcome to sanchez muga digital vision technology 2026</h1>
+
+    <button id="welcomeButton">🔊 Click to Listen</button>
+
+    <script>
+        const welcomeButton = document.getElementById("welcomeButton");
+
+        welcomeButton.addEventListener("click", function () {
+
+            const message = new SpeechSynthesisUtterance(
+                "Welcome to sanchez muga glein digital vision technology bussiness sample."
+            );
+
+            message.lang = "en-KE";
+            message.rate = 0.9;
+            message.pitch = 1;
+
+            speechSynthesis.cancel();
+            speechSynthesis.speak(message);
+        });
+    </script>
+
+
 
     <main>
         <section class="hero" id="home">
